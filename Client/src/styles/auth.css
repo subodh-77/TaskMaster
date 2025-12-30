@@ -1,0 +1,163 @@
+/* auth.css */
+
+/* 1. Wrapper to center everything on the screen */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6; /* Modern light gray */
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+/* 2. The Card - Fixed size for consistency */
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Consistency Fixes */
+  width: 100%;
+  max-width: 450px;      /* Fixed width */
+  min-height: 600px;     /* Fixed minimum height for both pages */
+  
+  /* Vertical Centering of content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.auth-card h2 {
+  margin: 0 0 10px 0;
+  color: #111827;
+  font-size: 1.875rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.auth-card p {
+  color: #6b7280;
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* 3. Form Styling */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+/* 4. Action Button */
+.btn-auth {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-auth:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-auth:active {
+  transform: translateY(0);
+}
+
+/* 5. Footer Links */
+.auth-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.auth-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+/* ... existing CSS ... */
+
+/* 6. Feedback Messages (Error/Success) */
+.message {
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid;
+  /* Simple entrance animation */
+  animation: fadeInDown 0.3s ease-out;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.success-message {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border-color: #bbf7d0;
+}
+
+/* Animation for the message box */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
