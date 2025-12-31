@@ -14,7 +14,7 @@ app.get("/test", (req, res) => res.send("Server is alive!"));
 // Enable CORS for all routes
 app.use(cors({
   origin: [
-    "http://localhost:5173", // For local development (Vite)
+    "http://localhost:5173", // For local development 
     "https://your-taskmaster-frontend.vercel.app" // Your LIVE Vercel URL
   ],
   credentials: true
