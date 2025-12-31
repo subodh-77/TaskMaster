@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/landing.css"; // Corrected path to go up to src then into styles
+import "../styles/Landing.css"; 
 
 export default function Landing() {
   const navigate = useNavigate();

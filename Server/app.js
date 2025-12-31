@@ -12,7 +12,13 @@ const app = express();
 app.use(express.json());
 app.get("/test", (req, res) => res.send("Server is alive!"));
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173", // For local development (Vite)
+    "https://your-taskmaster-frontend.vercel.app" // Your LIVE Vercel URL
+  ],
+  credentials: true
+}));
 // Use authentication routes
 app.use('/api/auth', authRoutes);//prefix all auth routes with /api/auth
 // Use task routes
