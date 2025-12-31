@@ -11,11 +11,7 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.get("/test", (req, res) => res.send("Server is alive!"));
-// Enable CORS for all routes
-const cors = require('cors');
-
-
-
+// Enable CORS for specific origins
 app.use(cors({
   origin: [
     "http://localhost:5173",
