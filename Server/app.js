@@ -21,7 +21,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://task-master-ruby-nine.vercel.app", 
-    "https://task-master-2ala13szt-sptpasus04-4116s-projects.vercel.app" // Add this one!
+    "https://task-master-2ala13szt-sptpasus04-4116s-projects.vercel.app" 
   ],
   credentials: true
 }));
