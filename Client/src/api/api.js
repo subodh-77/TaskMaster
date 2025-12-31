@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 1. Create the Instance
 const API = axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: "https://taskmaster-gkuk.onrender.com/api",
 });
 
 // 2. Add the Interceptor (Automatically adds the Token)
