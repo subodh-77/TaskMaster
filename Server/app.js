@@ -14,8 +14,7 @@ app.get("/test", (req, res) => res.send("Server is alive!"));
 // Enable CORS for all routes
 const cors = require('cors');
 
-// In your Server/app.js
-const cors = require('cors');
+
 
 app.use(cors({
   origin: [
