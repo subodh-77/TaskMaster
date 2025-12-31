@@ -12,10 +12,13 @@ const app = express();
 app.use(express.json());
 app.get("/test", (req, res) => res.send("Server is alive!"));
 // Enable CORS for all routes
+const cors = require('cors');
+
 app.use(cors({
   origin: [
-    "http://localhost:5173", // For local development 
-    "https://your-taskmaster-frontend.vercel.app" // Your LIVE Vercel URL
+    "http://localhost:5173", // Keep this for local development
+    "https://task-master-ruby-nine.vercel.app", // Add your Vercel production URL
+    "https://task-master-git-main-sptpasus04-4116s-projects.vercel.app" // Add the specific one from your error
   ],
   credentials: true
 }));
