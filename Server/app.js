@@ -14,11 +14,14 @@ app.get("/test", (req, res) => res.send("Server is alive!"));
 // Enable CORS for all routes
 const cors = require('cors');
 
+// In your Server/app.js
+const cors = require('cors');
+
 app.use(cors({
   origin: [
-    "http://localhost:5173", // Keep this for local development
-    "https://task-master-ruby-nine.vercel.app", // Add your Vercel production URL
-    "https://task-master-git-main-sptpasus04-4116s-projects.vercel.app" // Add the specific one from your error
+    "http://localhost:5173",
+    "https://task-master-ruby-nine.vercel.app", 
+    "https://task-master-2ala13szt-sptpasus04-4116s-projects.vercel.app" // Add this one!
   ],
   credentials: true
 }));
